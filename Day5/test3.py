@@ -59,7 +59,6 @@ def makelog(log):
         print('{:<8}{}'.format(key, dic[key]))
 
 
-    # print('{:<8}{}'.format(file_type, file_size))
 makelog(log)
 
 

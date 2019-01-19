@@ -42,7 +42,7 @@ key 是各个学生的id号， value是 该学生的签到信息
 
 fileName ='./0005_1.txt'
 def putInfoToDict(fileName):
-    fh = open(fileName)
+    with open(fileName) as fh:
     str = fh.read()
     alist =list(str.strip().split('\n'))
     dic1 = dict()
@@ -62,7 +62,7 @@ def putInfoToDict(fileName):
             dic1[stuid].append(dic2)
         clist = []
     for one in dic1:
-        print(f'\n {one}\n {dic1[one]}')
+        print(f'\n {one}:\n {dic1[one]}')
 
 
 

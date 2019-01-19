@@ -1,7 +1,20 @@
+'''
+每个房间里面可能是体重200斤的老虎或者体重100斤的羊。
+游戏开始后，系统随机在10个房间中放入老虎或者羊。
+然后随机给出房间号，要求游戏者选择敲门还是喂食。
+如果选择喂食：
+喂老虎应该输入单词 meat，喂羊应该输入单词 grass
+喂对了，体重加10斤。 喂错了，体重减少10斤
+如果选择敲门：
+敲房间的门，里面的动物会叫，老虎叫会显示 ‘Wow !!’,羊叫会显示 ‘mie~~’。 动物每叫一次体重减5斤。
+游戏者强记每个房间的动物是什么，以便不需要敲门就可以喂正确的食物。
+游戏3分钟结束后，显示每个房间的动物和它们的体重。
+'''
+
+
+
 from random import  randint
 import time
-import os
-
 
 def choose1(room):
     while True:
@@ -65,7 +78,7 @@ for one in rlist:
 startTime = time.time()
 while True:
     endTime =time.time()
-    if (endTime - startTime)>10:
+    if (endTime - startTime)>180:
         break
     else:
         room = rlist[randint(0,9)]
